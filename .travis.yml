@@ -1,0 +1,8 @@
+sudo: required
+language: generic
+services:
+    - docker
+install:
+    - docker build -t szabgab/test-mongodb .
+script:
+    - docker run szabgab/test-mongodb prove6 -l
